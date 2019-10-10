@@ -9,8 +9,9 @@ import org.junit.Test;
 public class HandTypeTest {
 	// We define the hands using abbreviations. The code at the bottom
 	// of this class can translate one of these strings into a card.
-	//
+	// 
 	// Another method takes a set of five cards, and translates the whole hand
+	//
 	//
 	// Yet another method does this for a whole set of hands
 	private static String[][] highCards = {
