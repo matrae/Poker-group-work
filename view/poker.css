@@ -36,3 +36,7 @@
 .deck{
     -fx-background-color: rgba(128, 125, 119, 0.53);
 }
+
+#playerName{
+	-fx-font-color: white;
+}

@@ -3,18 +3,18 @@ package view;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import model.Card;
 import model.HandType;
 import model.Player;
 
 public class PlayerPane extends VBox {
-    private Label lblName = new Label();
+	private Label lblName = new Label();
     private HBox hboxCards = new HBox();
     private Label lblEvaluation = new Label("--");
     
     // Link to player object
-    //
     private Player player;
     
     public PlayerPane() {
