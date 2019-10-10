@@ -16,6 +16,7 @@
 	-fx-padding: 5.0px;
     -fx-border-color: black;
     -fx-border-width: 2.0px;
+    -fx-background-color: green;
 }
 
 .card {
@@ -23,11 +24,15 @@
 	-fx-padding: 2.0px;
     -fx-border-color: black;
     -fx-border-width: 1.0px;
-	-fx-background-color: lemonchiffon;
+	-fx-background-color: white;
     -fx-min-width: 50;
     -fx-pref-width: 111;
     -fx-max-width: 500;
     -fx-min-height: 80;
     -fx-pref-height: 162;
     -fx-max-height: 800;
+}
+
+.deck{
+    -fx-background-color: rgba(128, 125, 119, 0.53);
 }
