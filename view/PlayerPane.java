@@ -14,6 +14,7 @@ public class PlayerPane extends VBox {
     private Label lblEvaluation = new Label("--");
     
     // Link to player object
+    //
     private Player player;
     
     public PlayerPane() {
