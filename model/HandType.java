@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import model.Card.Suit;
+
 public enum HandType {
     HighCard, OnePair, TwoPair, ThreeOfAKind, Straight, Flush, FullHouse, FourOfAKind, StraightFlush;
     
@@ -55,10 +57,10 @@ public enum HandType {
     
     // Check if there are three of a kind in one set of cards 
     public static boolean isThreeOfAKind(ArrayList<Card> cards) {   
-        boolean ThreeFound = false;
+        boolean threeFound = false;
         int iterations = 0;
-        for (int i = 0; i < cards.size() - 1 && !ThreeFound; i++) {
-            for (int j = i+1; j < cards.size() && !ThreeFound; j++) {
+        for (int i = 0; i < cards.size() - 1 && !threeFound; i++) {
+            for (int j = i+1; j < cards.size() && !threeFound; j++) {
                 if (cards.get(i).getRank() == cards.get(j).getRank()) {
                 	iterations++; 
                 }
@@ -66,11 +68,11 @@ public enum HandType {
                 	iterations = 0;
                 }
                 else if(j== cards.size()-1 && iterations >= 2) {
-                    ThreeFound = true;
+                    threeFound = true;
                 }
             }
         }
-        return ThreeFound;
+        return threeFound;
     }
         
     public static boolean isStraight(ArrayList<Card> cards) {
@@ -78,9 +80,18 @@ public enum HandType {
         return false;
     }
     
+    // Cards have to be same color 
     public static boolean isFlush(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+        boolean foundFlush = false;
+        int counter = 0;
+        for (int i = 0; i < cards.size() && !foundFlush; i++) {
+            // Counter has to be either 0 or 5 for it to be a flush
+        	if (cards.get(i).getSuit() == Suit.Diamonds || cards.get(i).getSuit() == Suit.Hearts) {
+                counter++;
+            } 
+        }
+    	if (counter == 0 || counter == 5) foundFlush = true;
+        return foundFlush;
     }
     
     public static boolean isFullHouse(ArrayList<Card> cards) {
