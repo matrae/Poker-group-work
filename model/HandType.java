@@ -53,11 +53,26 @@ public enum HandType {
         return firstPairFound && isOnePair(clonedCards);
     }
     
-    public static boolean isThreeOfAKind(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    // Check if there are three of a kind in one set of cards 
+    public static boolean isThreeOfAKind(ArrayList<Card> cards) {   
+        boolean ThreeFound = false;
+        int iterations = 0;
+        for (int i = 0; i < cards.size() - 1 && !ThreeFound; i++) {
+            for (int j = i+1; j < cards.size() && !ThreeFound; j++) {
+                if (cards.get(i).getRank() == cards.get(j).getRank()) {
+                	iterations++; 
+                }
+                if(j == cards.size()-1 && iterations!=2) { 	
+                	iterations = 0;
+                }
+                else if(j== cards.size()-1 && iterations >= 2) {
+                    ThreeFound = true;
+                }
+            }
+        }
+        return ThreeFound;
     }
-    
+        
     public static boolean isStraight(ArrayList<Card> cards) {
         // TODO        
         return false;
