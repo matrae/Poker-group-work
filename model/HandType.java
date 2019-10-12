@@ -1,6 +1,8 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import model.Card.Suit;
 
@@ -74,10 +76,29 @@ public enum HandType {
         }
         return threeFound;
     }
-        
+    
+    // Like 1, 2, 3, 4, 5 -> first sort, then check if it's a straight
     public static boolean isStraight(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    	boolean foundStraight = false;
+    	int ordinalCounter = 0;
+        //sort according to rank ATTENTION MIGHT BREAK OTHER PARTS OF THE GAME?
+    	Collections.sort(cards, new Comparator<Card>() {
+			@Override
+			public int compare(Card arg0, Card arg1) {
+				return arg0.getRank().compareTo(arg1.getRank());
+			}
+        }); 
+    	// Compare ordinal values .. if always -1 then Straight is found
+    	for (int i = 0; i < cards.size() - 1 && !foundStraight; i++) {
+    		if (cards.get(i).getRank().ordinal() - cards.get(i+1).getRank().ordinal() == -1) {
+    			ordinalCounter++;
+    		}
+    		if (ordinalCounter == 4) {
+    			foundStraight = true;
+    		}	
+        }
+    	System.out.println(ordinalCounter);
+    	return foundStraight;
     }
     
     // Cards have to be same color 
