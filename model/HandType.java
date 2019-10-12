@@ -136,8 +136,24 @@ public enum HandType {
     }
     
     public static boolean isFourOfAKind(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    	boolean isFourAKind = false;
+        //sort according to rank ATTENTION MIGHT BREAK OTHER PARTS OF THE GAME?
+    	Collections.sort(cards, new Comparator<Card>() {
+			@Override
+			public int compare(Card arg0, Card arg1) {
+				return arg0.getRank().compareTo(arg1.getRank());
+			}
+		// Check of if the first four OR the last four are equal.
+        }); 
+    	if ((cards.get(0).getRank() == cards.get(1).getRank() && 
+    		cards.get(1).getRank() == cards.get(2).getRank() &&
+    		cards.get(2).getRank() == cards.get(3).getRank()) ||
+    		(cards.get(1).getRank() == cards.get(2).getRank() && 
+    		cards.get(2).getRank() == cards.get(3).getRank() &&
+    		cards.get(3).getRank() == cards.get(4).getRank())) {
+    		isFourAKind = true;
+    	}
+    	return isFourAKind;
     }
     
     public static boolean isStraightFlush(ArrayList<Card> cards) {
