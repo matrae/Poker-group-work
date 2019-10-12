@@ -97,7 +97,6 @@ public enum HandType {
     			foundStraight = true;
     		}	
         }
-    	System.out.println(ordinalCounter);
     	return foundStraight;
     }
     
@@ -126,7 +125,32 @@ public enum HandType {
     }
     
     public static boolean isStraightFlush(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    	boolean foundStraightFlush = false;
+    	int ordinalCounter = 0;
+    	int flushCounter = 0;
+        //sort according to rank ATTENTION MIGHT BREAK OTHER PARTS OF THE GAME?
+    	Collections.sort(cards, new Comparator<Card>() {
+			@Override
+			public int compare(Card arg0, Card arg1) {
+				return arg0.getRank().compareTo(arg1.getRank());
+			}
+        }); 
+    	// first check for flush (seperate loop because full iteration is needed)
+    	for (int i = 0; i < cards.size() && !foundStraightFlush; i++) {
+    		if (cards.get(i).getSuit() == Suit.Diamonds || cards.get(i).getSuit() == Suit.Hearts) {
+    			flushCounter++;
+    		}
+    	}
+    	// Compare ordinal value (same as straight method)
+    	for (int a = 0; a < cards.size() - 1 && !foundStraightFlush; a++) {
+    		if (cards.get(a).getRank().ordinal() - cards.get(a+1).getRank().ordinal() == -1) {
+    			ordinalCounter++;
+    		}
+    		// Also check the flush counter 
+    		if (ordinalCounter == 4 && flushCounter == 0 || flushCounter == 5) {
+    			foundStraightFlush = true;
+    		}	
+        }
+    	return foundStraightFlush;
     }
 }
