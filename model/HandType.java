@@ -115,8 +115,24 @@ public enum HandType {
     }
     
     public static boolean isFullHouse(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    	boolean isFullHouse = false;
+        //sort according to rank ATTENTION MIGHT BREAK OTHER PARTS OF THE GAME?
+    	Collections.sort(cards, new Comparator<Card>() {
+			@Override
+			public int compare(Card arg0, Card arg1) {
+				return arg0.getRank().compareTo(arg1.getRank());
+			}
+		// Check of if the first three and the last two OR the first two and the last three are equal.
+        }); 
+    	if ((cards.get(0).getRank() == cards.get(1).getRank() && 
+    		cards.get(1).getRank() == cards.get(2).getRank() &&
+    		cards.get(3).getRank() == cards.get(4).getRank()) ||
+    		(cards.get(0).getRank() == cards.get(1).getRank() && 
+    		cards.get(2).getRank() == cards.get(3).getRank() &&
+    		cards.get(3).getRank() == cards.get(4).getRank())) {
+    		isFullHouse = true;
+    	}
+    	return isFullHouse;
     }
     
     public static boolean isFourOfAKind(ArrayList<Card> cards) {
@@ -147,7 +163,7 @@ public enum HandType {
     			ordinalCounter++;
     		}
     		// Also check the flush counter 
-    		if (ordinalCounter == 4 && flushCounter == 0 || flushCounter == 5) {
+    		if (ordinalCounter == 4 && (flushCounter == 0 || flushCounter == 5)) {
     			foundStraightFlush = true;
     		}	
         }
