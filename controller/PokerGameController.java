@@ -57,8 +57,9 @@ public class PokerGameController {
         		pp.updatePlayerDisplay();
         	}
     	} else {
-            Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
-            alert.showAndWait();
+    		model.getDeck().shuffle();
+            //Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
+            //alert.showAndWait();
     	}
     }
 }
