@@ -3,6 +3,7 @@
     -fx-min-width: 200.0;
     -fx-max-width: 2000.0;
   	-fx-alignment: center;
+  	-fx-color: white;
 }
 
 #controlArea {
@@ -17,6 +18,7 @@
     -fx-border-color: black;
     -fx-border-width: 2.0px;
     -fx-background-color: green;
+    -fx-color: white;
 }
 
 .card {
@@ -37,6 +39,10 @@
     -fx-background-color: rgba(128, 125, 119, 0.53);
 }
 
-#playerName{
-	-fx-font-color: white;
+.playerLabel {
+	-fx-text-fill: white;
+	}
+	
+.cardLabel{
+	-fx-text-fill: white;
 }
