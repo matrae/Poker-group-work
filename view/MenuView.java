@@ -1,6 +1,7 @@
 package view;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
@@ -20,24 +21,23 @@ public class MenuView {
 	
 	
 	public void start(Stage primaryStage) {
-		HBox root = new HBox();
+		BorderPane pane = new BorderPane();
+		VBox pane2 = new VBox();
 		Region spacer = new Region();
 		spacer.setPrefHeight(30);
-		VBox boxCenter = new VBox(twoPlayers, threePlayers, fourPlayers, startGame);
-	 
-	 		
-		boxCenter.getChildren().addAll(txtField, boxBottom);
 		
+		//add buttons into VBox
+		pane2.getChildren().addAll(twoPlayers, threePlayers, fourPlayers, spacer, startGame);
 		
-		
-		root.getChildren().addAll(boxCenter, root);
-		
-		Scene scene = new Scene(root);
+		//add pane2(VBox) into the borderPane
+		pane.setCenter(pane2);
+			
+		Scene scene = new Scene(pane, 700, 550);
 	    primaryStage.setTitle("PokerGame Menu");
 	    primaryStage.setScene(scene);
 	    primaryStage.show();
+	   
 	}
 
-
-	}
+}
 
