@@ -43,11 +43,20 @@ public class HandTypeTest {
 			{ "9S", "2C", "5H", "5D", "5H" }
 			};
 	
+	//New Test for royalflush
+	private static String[][] isStraight = {
+			{ "2S", "3C", "4H", "5D", "6H" },
+			{ "3S", "4C", "5H", "6D", "7H" },
+			{ "4S", "5C", "6H", "7D", "8H" },
+			{ "4S", "5C", "6H", "7D", "8H" }
+			};
+	
 	// This is where we store the translated hands
 	ArrayList<ArrayList<Card>> highCardHands;
 	ArrayList<ArrayList<Card>> pairHands;
 	ArrayList<ArrayList<Card>> twoPairHands;
 	ArrayList<ArrayList<Card>> threeCardHands;
+	ArrayList<ArrayList<Card>> straightHands;
 	
 	/**
 	 * The makeHands method is called before each test method,
@@ -60,6 +69,7 @@ public class HandTypeTest {
 		pairHands = makeHands(pairs);
 		twoPairHands = makeHands(twoPairs);
 		threeCardHands = makeHands(threeOfAKind);
+		straightHands = makeHands(isStraight);
 	}
 
 	/**
@@ -107,6 +117,21 @@ public class HandTypeTest {
 		}
 		for (ArrayList<Card> hand : threeCardHands) {
 			assertTrue(HandType.isThreeOfAKind(hand)); // should be true
+		}
+	}
+	
+	// Test if hand = straight 
+	@Test
+	public void testIsStraight() {
+		//why does this one neither work with false and true?
+		for (ArrayList<Card> hand : highCardHands) {
+			assertFalse(HandType.isStraight(hand));
+		}
+		for (ArrayList<Card> hand : pairHands) {
+			assertFalse(HandType.isStraight(hand)); 
+		}
+		for (ArrayList<Card> hand : straightHands) {
+			assertTrue(HandType.isStraight(hand)); // should be true
 		}
 	}
 	
