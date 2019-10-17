@@ -31,6 +31,10 @@ public class PlayerPane extends VBox {
             hboxCards.getChildren().add(lblCard);
             lblCard.getStyleClass().add("cardLabel");
         }
+        
+        // Add spaces between cards
+        hboxCards.setSpacing(7);
+
     }
     
     public void setPlayer(Player player) {
