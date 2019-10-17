@@ -43,6 +43,10 @@
 	-fx-text-fill: white;
 	}
 	
+.scoreLabel {
+	-fx-text-fill: white;
+}
+	
 .cardLabel{
 	-fx-text-fill: white;
 }
