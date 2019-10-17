@@ -13,6 +13,7 @@ public class PlayerPane extends VBox {
 	private Label lblName = new Label();
     private HBox hboxCards = new HBox();
     private Label lblEvaluation = new Label("--");
+    private Label scoreLable = new Label("Score: 0"); //Create score lable
     
     // Link to player object
     private Player player;
@@ -23,7 +24,7 @@ public class PlayerPane extends VBox {
         lblName.getStyleClass().add("playerLabel");
         
         // Add child nodes
-        this.getChildren().addAll(lblName, hboxCards, lblEvaluation);
+        this.getChildren().addAll(lblName, hboxCards, lblEvaluation,scoreLable);
         
         // Add CardLabels for the cards
         for (int i = 0; i < 5; i++) {
