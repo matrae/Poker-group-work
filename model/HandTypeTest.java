@@ -35,10 +35,19 @@ public class HandTypeTest {
 			{ "9S", "2C", "2H", "5D", "5H" }
 			};
 	
+	//New Test for three of a kind
+	private static String[][] threeOfAKind = {
+			{ "2S", "2C", "2H", "5D", "7H" },
+			{ "2S", "5C", "5H", "5D", "AH" },
+			{ "3S", "2C", "QH", "QD", "QH" },
+			{ "9S", "2C", "5H", "5D", "5H" }
+			};
+	
 	// This is where we store the translated hands
 	ArrayList<ArrayList<Card>> highCardHands;
 	ArrayList<ArrayList<Card>> pairHands;
 	ArrayList<ArrayList<Card>> twoPairHands;
+	ArrayList<ArrayList<Card>> threeCardHands;
 	
 	/**
 	 * The makeHands method is called before each test method,
@@ -50,6 +59,7 @@ public class HandTypeTest {
 		highCardHands = makeHands(highCards);
 		pairHands = makeHands(pairs);
 		twoPairHands = makeHands(twoPairs);
+		threeCardHands = makeHands(threeOfAKind);
 	}
 
 	/**
@@ -83,6 +93,20 @@ public class HandTypeTest {
 		}
 		for (ArrayList<Card> hand : twoPairHands) {
 			assertTrue(HandType.isTwoPair(hand));
+		}
+	}
+	
+	// Test if we have 3 Cards 
+	@Test
+	public void testIsThreeCards() {
+		for (ArrayList<Card> hand : highCardHands) {
+			assertFalse(HandType.isThreeOfAKind(hand));
+		}
+		for (ArrayList<Card> hand : pairHands) {
+			assertFalse(HandType.isThreeOfAKind(hand)); 
+		}
+		for (ArrayList<Card> hand : threeCardHands) {
+			assertTrue(HandType.isThreeOfAKind(hand)); // should be true
 		}
 	}
 	
