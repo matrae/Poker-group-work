@@ -46,6 +46,10 @@
 .scoreLabel {
 	-fx-text-fill: white;
 }
+
+.evaluationLabel {
+	-fx-text-fill: white;	
+}
 	
 .cardLabel{
 	-fx-text-fill: white;
