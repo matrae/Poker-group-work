@@ -30,7 +30,6 @@ public class PokerGameView {
 		Button threePlayers = new Button("3");
 		Button fourPlayers = new Button("4");
 
-
 		// this.setId("startGame"); // Unique ID in the CSS: ToDo
 
 		// create layout 1 and put it into the BorderPane
@@ -64,7 +63,6 @@ public class PokerGameView {
 		// Put players, controls & goBack Button into a BorderPane
 		layout2.setCenter(players);
 		layout2.setBottom(controls);
-		layout2.setLeft(goBack);
 
 		// Disallow resizing - which is difficult to get right with images
 		stage.setResizable(false);
@@ -75,7 +73,7 @@ public class PokerGameView {
 		scene2.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
 		stage.setTitle("Poker Miniproject");
 
-		stage.setScene(scene2);
+		stage.setScene(scene1);
 		stage.show();
 	}
 
