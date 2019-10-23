@@ -20,6 +20,7 @@ public class PokerGameController {
 		
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
+		view.startGame.setOnAction(e -> view.stage.getScene().setRoot(view.layout2));
 	}
 	
 
