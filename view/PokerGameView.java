@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import game.PokerGame;
@@ -69,7 +70,7 @@ public class PokerGameView {
 		stage.setResizable(false);
 
 		// Create the second scene using our layout; then display it
-		Scene scene2 = new Scene(layout2);
+		scene2 = new Scene(layout2);
 
 		scene2.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
 		stage.setTitle("Poker Miniproject");
@@ -89,4 +90,9 @@ public class PokerGameView {
 	public Button getDealButton() {
 		return controls.btnDeal;
 	}
+	
+	public Button getGoBackButton() {
+		return controls.goBack;
+	}
+	
 }

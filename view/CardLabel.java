@@ -22,6 +22,7 @@ public class CardLabel extends Label {
 			this.setGraphic(imv);
 		} else {
 			this.setGraphic(null);
+			
 		}
 	}
 
