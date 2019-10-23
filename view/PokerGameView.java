@@ -24,7 +24,7 @@ public class PokerGameView {
 		this.model = model;
 		this.stage = stage;
 
-		Label labelMenu = new Label("This is the menu");
+		Label labelMenu = new Label("Choose how many people you would like to play with: ");
 		Button twoPlayers = new Button("2");
 		Button threePlayers = new Button("3");
 		Button fourPlayers = new Button("4");
