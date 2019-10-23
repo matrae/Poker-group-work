@@ -11,7 +11,7 @@ import game.PokerGame;
 import model.PokerGameModel;
 
 public class PokerGameView {
-	private VBox players;
+	private HBox players;
 	private ControlArea controls;
 	
 	private PokerGameModel model;
@@ -20,7 +20,7 @@ public class PokerGameView {
 		this.model = model;
 		
 		// Create all of the player panes we need, and put them into an HBox
-		players = new VBox();
+		players = new HBox();
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
