@@ -15,7 +15,7 @@ public class PokerGameView {
 	private HBox players;
 	private ControlArea controls;
 	private PokerGameModel model;
-	public Button startGame = new Button("Start Game!");
+	public Button startGame = new Button("Start Game");
 	public Scene scene1, scene2;
 	public Stage stage;
 	public BorderPane layout2 = new BorderPane();
@@ -43,7 +43,7 @@ public class PokerGameView {
 		// create scene1 with layout1
 		scene1 = new Scene(rootLayout1, 600, 500);
 
-		//needs to go into controller
+		//needs to go into controller: toDo
 		Button goBack = new Button("Back to Menu");
 		goBack.setOnAction(e -> stage.setScene(scene1));
 
@@ -60,7 +60,7 @@ public class PokerGameView {
 		controls = new ControlArea();
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
 
-		// Put players and controls into a BorderPane
+		// Put players, controls & goBack Button into a BorderPane
 		layout2.setCenter(players);
 		layout2.setBottom(controls);
 		layout2.setLeft(goBack);
