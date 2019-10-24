@@ -23,6 +23,8 @@ public class PokerGameController {
 		view.startGame.setOnAction(e -> view.stage.setScene(view.scene2));
 		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
 		//view.twoPlayers().setOnAction(e -> view.stage.setScene(view.scene2));
+		//view.threePlayers().setOnAction(e -> view.stage.setScene(view.scene2));
+		
 	}
 	
 

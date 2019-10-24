@@ -17,6 +17,7 @@ public class PokerGameView {
 	private HBox players;
 	private ControlArea controls;
 	private PokerGameModel model;
+	
 	public Button startGame = new Button("Start Game");
 	public Button twoPlayers = new Button("2");
 	public Button threePlayers = new Button("3");
