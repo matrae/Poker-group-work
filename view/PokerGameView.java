@@ -1,5 +1,6 @@
 package view;
 
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,6 +18,10 @@ public class PokerGameView {
 	private ControlArea controls;
 	private PokerGameModel model;
 	public Button startGame = new Button("Start Game");
+	public Button twoPlayers = new Button("2");
+	public Button threePlayers = new Button("3");
+	public Button fourPlayers = new Button("4");
+	
 	public Scene scene1, scene2;
 	public Stage stage;
 	public BorderPane layout2 = new BorderPane();
@@ -25,27 +30,22 @@ public class PokerGameView {
 		this.model = model;
 		this.stage = stage;
 
-		Label labelMenu = new Label("Choose how many people you would like to play with: ");
-		Button twoPlayers = new Button("2");
-		Button threePlayers = new Button("3");
-		Button fourPlayers = new Button("4");
-
-		// this.setId("startGame"); // Unique ID in the CSS: ToDo
+		Label labelMenu = new Label("Choose player number: ");
+				
+		//CSS ID
+		//getStyleClass().add("playerButton");
 
 		// create layout 1 and put it into the BorderPane
 		BorderPane rootLayout1 = new BorderPane();
-		VBox layout1 = new VBox(20);
+		VBox layout1 = new VBox(10);
+		layout1.setPadding(new Insets(20, 50, 50, 50));
 		rootLayout1.setCenter(layout1);
 
 		// add buttons into VBox for layout1
 		layout1.getChildren().addAll(labelMenu, twoPlayers, threePlayers, fourPlayers, startGame);
 
 		// create scene1 with layout1
-		scene1 = new Scene(rootLayout1, 600, 500);
-
-		//needs to go into controller: toDo
-		Button goBack = new Button("Back to Menu");
-		goBack.setOnAction(e -> stage.setScene(scene1));
+		scene1 = new Scene(rootLayout1, 400, 300);
 
 		// Create layout 2
 		// Create all of the player panes we need, and put them into an HBox
@@ -70,6 +70,7 @@ public class PokerGameView {
 		// Create the second scene using our layout; then display it
 		scene2 = new Scene(layout2);
 
+		scene1.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
 		scene2.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
 		stage.setTitle("Poker Miniproject");
 

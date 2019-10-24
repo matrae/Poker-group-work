@@ -12,6 +12,7 @@ public class ControlArea extends HBox{
     Button btnShuffle = new Button("Shuffle");
     Button btnDeal = new Button("Deal");
     Button goBack = new Button("Back to Menu");
+   
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!
@@ -20,6 +21,7 @@ public class ControlArea extends HBox{
 
         HBox.setHgrow(spacer, Priority.ALWAYS); // Use region to absorb resizing
         this.setId("controlArea"); // Unique ID in the CSS
+        
     }
     
     public void linkDeck(DeckOfCards deck) {

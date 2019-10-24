@@ -22,7 +22,7 @@ public class PokerGameController {
 		view.getDealButton().setOnAction( e -> deal() );
 		view.startGame.setOnAction(e -> view.stage.setScene(view.scene2));
 		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
-			
+		//view.twoPlayers().setOnAction(e -> view.stage.setScene(view.scene2));
 	}
 	
 
