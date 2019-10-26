@@ -100,17 +100,26 @@ public enum HandType {
     	return foundStraight;
     }
     
-    // Cards have to be same color 
+    // Cards have to have the same suit
     public static boolean isFlush(ArrayList<Card> cards) {
         boolean foundFlush = false;
-        int counter = 0;
+        int aCounter = 0;
+        int bCounter = 0;
+        int cCounter = 0;
+        int dCounter = 0;
         for (int i = 0; i < cards.size() && !foundFlush; i++) {
-            // Counter has to be either 0 or 5 for it to be a flush
-        	if (cards.get(i).getSuit() == Suit.Diamonds || cards.get(i).getSuit() == Suit.Hearts) {
-                counter++;
-            } 
+            // Counter has to 5 for it to be a flush
+        	if (cards.get(i).getSuit() == Suit.Diamonds) {
+        		aCounter++;
+        	} else if (cards.get(i).getSuit() == Suit.Hearts) {
+                bCounter++;
+            } else if (cards.get(i).getSuit() == Suit.Spades) {
+            	cCounter++;
+            } else if (cards.get(i).getSuit() == Suit.Clubs) {
+            	dCounter++;
+            }
         }
-    	if (counter == 0 || counter == 5) foundFlush = true;
+    	if (aCounter == 5 || bCounter == 5 || cCounter == 5 || dCounter == 5) foundFlush = true;
         return foundFlush;
     }
     
@@ -160,7 +169,10 @@ public enum HandType {
     public static boolean isStraightFlush(ArrayList<Card> cards) {
     	boolean foundStraightFlush = false;
     	int ordinalCounter = 0;
-    	int flushCounter = 0;
+    	int aFlushCounter = 0;
+    	int bFlushCounter = 0;
+    	int cFlushCounter = 0;
+    	int dFlushCounter = 0;
         //sort according to rank ATTENTION MIGHT BREAK OTHER PARTS OF THE GAME?
     	Collections.sort(cards, new Comparator<Card>() {
 			@Override
@@ -170,9 +182,15 @@ public enum HandType {
         }); 
     	// first check for flush (seperate loop because full iteration is needed)
     	for (int i = 0; i < cards.size() && !foundStraightFlush; i++) {
-    		if (cards.get(i).getSuit() == Suit.Diamonds || cards.get(i).getSuit() == Suit.Hearts) {
-    			flushCounter++;
-    		}
+        	if (cards.get(i).getSuit() == Suit.Diamonds) {
+        		aFlushCounter++;
+        	} else if (cards.get(i).getSuit() == Suit.Hearts) {
+                bFlushCounter++;
+            } else if (cards.get(i).getSuit() == Suit.Spades) {
+            	cFlushCounter++;
+            } else if (cards.get(i).getSuit() == Suit.Clubs) {
+            	dFlushCounter++;
+            }
     	}
     	// Compare ordinal value (same as straight method)
     	for (int a = 0; a < cards.size() - 1 && !foundStraightFlush; a++) {
@@ -180,7 +198,7 @@ public enum HandType {
     			ordinalCounter++;
     		}
     		// Also check the flush counter 
-    		if (ordinalCounter == 4 && (flushCounter == 0 || flushCounter == 5)) {
+    		if (ordinalCounter == 4 && (aFlushCounter == 5 || bFlushCounter == 5 || cFlushCounter == 5 || dFlushCounter == 5)) {
     			foundStraightFlush = true;
     		}	
         }
