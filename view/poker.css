@@ -33,6 +33,9 @@
     -fx-min-height: 80;
     -fx-pref-height: 162;
     -fx-max-height: 800;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+   
 }
 
 .deck{
