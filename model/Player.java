@@ -8,6 +8,7 @@ public class Player implements Comparable<Player> {
     private final String playerName; // This is the ID
     private final ArrayList<Card> cards = new ArrayList<>();
     private HandType handType;
+    private int score = 0;
     
     public Player(String playerName) {
         this.playerName = playerName;
@@ -43,6 +44,15 @@ public class Player implements Comparable<Player> {
             handType = HandType.evaluateHand(cards);
         }
         return handType;
+    }
+    
+    public void updateScore() {
+    	score = score + 100;
+    }
+    
+    public String getScore() {
+    	String scoreString = Integer.toString(score);
+    	return scoreString;
     }
 
     /**
