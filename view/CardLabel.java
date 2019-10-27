@@ -21,7 +21,12 @@ public class CardLabel extends Label {
 			imv.setPreserveRatio(true);
 			this.setGraphic(imv);
 		} else {
-			this.setGraphic(null);
+			Image imageBack = new Image(this.getClass().getClassLoader().getResourceAsStream("images/card_background.png"));
+			ImageView imv = new ImageView(imageBack);
+			imv.fitWidthProperty().bind(this.widthProperty());
+			imv.fitHeightProperty().bind(this.heightProperty());
+			imv.setPreserveRatio(true);
+			this.setGraphic(imv);
 			
 		}
 	}
