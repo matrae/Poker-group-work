@@ -17,7 +17,7 @@ public class PlayerPane extends VBox {
 	private Label lblName = new Label();
     private HBox hboxCards = new HBox();
     private Label lblEvaluation = new Label("--");
-    private Label scoreLabel = new Label("Score: "); //Create score label
+    private Label scoreLabel = new Label("Score"); //Create score label
     private Label actualScore = new Label("0"); 
     
     // Link to player object

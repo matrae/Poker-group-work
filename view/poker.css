@@ -1,6 +1,6 @@
 .label {
 	-fx-padding: 5.0px;
-    -fx-min-width: 200.0;
+    -fx-min-width: 150.0;
     -fx-max-width: 2000.0;
   	-fx-alignment: center;
   	-fx-color: white;
@@ -12,11 +12,6 @@
     -fx-border-color: black;
     -fx-border-width: 2.0px;
     -fx-background-color: #faf0e6;
-}
-
-.deckLabel {
-	
-
 }
 
 #menuPane {
@@ -74,8 +69,8 @@
 	}
 	
 .scoreLabel {
-	-fx-text-fill: #ffd700;
-	-fx-font-weigt: bold;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
 	-fx-font-size: 13px;
 }
 
@@ -115,12 +110,12 @@
    }
 	
 .button:pressed{
-	-fx-background-color: rgb(211,211,211);
+	-fx-background-color: green;
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
     -fx-text-fill: black;
     -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
     
    }
    

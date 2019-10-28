@@ -26,7 +26,7 @@ public class PokerGameController{
 		view.getDealButton().setOnAction( e -> deal() );
 		view.startGame.setOnAction(e -> view.stage.setScene(view.scene2));
 		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
-		view.threePlayers.setOnAction(e -> setThreePlayers());
+		//view.threePlayers.setOnAction(e -> setThreePlayers());
 		
 		
 		//view.twoPlayers().addActionListener(e -> addPlayer() );
@@ -35,10 +35,10 @@ public class PokerGameController{
 	
 	//private void addPLayer () {
 	//	PokerGame.NUM_PLAYERS++;
-	public void setThreePlayers() {
-		PokerGame.NUM_PLAYERS = 3;
-		PokerGame.updatePlayer();
-	}
+//	public void setThreePlayers() {
+	//	PokerGame.NUM_PLAYERS = 3;
+	//	PokerGame.updatePlayer();
+//	}
 	
     /**
      * Remove all cards from players hands, and shuffle the deck
