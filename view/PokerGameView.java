@@ -33,8 +33,6 @@ public class PokerGameView {
 
 		Label labelMenu = new Label("Choose player number: ");
 				
-		//CSS ID
-		//getStyleClass().add("playerButton");
 
 		// create layout 1 and put it into the BorderPane
 		BorderPane rootLayout1 = new BorderPane();

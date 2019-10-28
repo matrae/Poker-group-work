@@ -45,13 +45,13 @@
 }
 
 .deck{
-    -fx-background-color:
-        linear-gradient(#f0ff35, #a9ff00),
-        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);
+    -fx-background-color: green;	
     -fx-background-radius: 6, 5;
     -fx-background-insets: 0, 1;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
-    -fx-text-fill: #395306;
+    -fx-text-fill: white;
+    -fx-padding: 3 30 3 30;
+    -fx-width: 100px;
 }
 
 .playerLabel {
@@ -78,9 +78,11 @@
         linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
+    -fx-padding: 3 30 3 30 ;
     -fx-text-fill: black;
     -fx-font-size: 14px;
+   	-fx-width: 50px;
+   	-fx-pref-width: 120px;
     
    }
 	
@@ -95,17 +97,13 @@
    }
 
 .PokerGameView-button{
-	-fx-background-color: 
-        #000000,
-        linear-gradient(#7ebcea, #2f4b8f),
-        linear-gradient(#426ab7, #263e75),
-        linear-gradient(#395cab, #223768);
-    -fx-background-insets: 0,1,2,3;
-    -fx-background-radius: 3,2,2,2;
-    -fx-padding: 12 30 12 30;
-    -fx-text-fill: white;
-    -fx-font-size: 12px;
+	-fx-background-color: green;
+	-fx-border-color: black;
+    -fx-border-width: 1.0px;
+	-fx-background-color: white;
 }
+
+
 
 
 

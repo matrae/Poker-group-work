@@ -12,6 +12,7 @@ public class ControlArea extends HBox{
     Button btnShuffle = new Button("Shuffle");
     Button btnDeal = new Button("Deal");
     Button goBack = new Button("Back to Menu");
+    
    
 
     public ControlArea() {
