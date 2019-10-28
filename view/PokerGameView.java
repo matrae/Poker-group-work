@@ -101,5 +101,5 @@ public class PokerGameView {
 	public Button getGoBackButton() {
 		return controls.goBack;
 	}
-	
+
 }
