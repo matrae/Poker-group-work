@@ -62,6 +62,18 @@
 	
 .scoreLabel {
 	-fx-text-fill: white;
+
+}
+
+.actualScore {
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+	-fx-font-size: 15px;
+	-fx-background-image: url("/images/score_coin.png");
+	-fx-background-size : 44px 35px;
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+	
 }
 
 .evaluationLabel {

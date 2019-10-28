@@ -29,7 +29,7 @@ public class PlayerPane extends VBox {
         lblName.getStyleClass().add("playerLabel");
         lblEvaluation.getStyleClass().add("evaluationLabel");
         scoreLabel.getStyleClass().add("scoreLabel");
-        actualScore.getStyleClass().add("scoreLabel");
+        actualScore.getStyleClass().add("actualScore");
         
         
         // Add child nodes
