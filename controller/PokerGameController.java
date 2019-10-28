@@ -1,7 +1,11 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+
+import java.awt.event.ActionListener;
+
 import game.PokerGame;
 import model.Card;
 import model.DeckOfCards;
@@ -10,11 +14,11 @@ import model.PokerGameModel;
 import view.PlayerPane;
 import view.PokerGameView;
 
-public class PokerGameController {
+public class PokerGameController{
 	private PokerGameModel model;
 	private PokerGameView view;
 	
-	public PokerGameController(PokerGameModel model, PokerGameView view) {
+	public PokerGameController (PokerGameModel model, PokerGameView view) {
 		this.model = model;
 		this.view = view;
 		
@@ -22,13 +26,15 @@ public class PokerGameController {
 		view.getDealButton().setOnAction( e -> deal() );
 		view.startGame.setOnAction(e -> view.stage.setScene(view.scene2));
 		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
-		//view.twoPlayers().setOnAction(e -> view.stage.setScene(view.scene2));
-		//view.threePlayers().setOnAction(e -> view.stage.setScene(view.scene2));
+		
+		//view.twoPlayers().addActionListener(e -> addPlayer() );
 		
 	}
 	
-
-
+	//private void addPLayer () {
+	//	PokerGame.NUM_PLAYERS++;
+	//}
+	
     /**
      * Remove all cards from players hands, and shuffle the deck
      */
