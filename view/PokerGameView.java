@@ -39,12 +39,14 @@ public class PokerGameView {
 		// create layout 1 and put it into the BorderPane
 		BorderPane rootLayout1 = new BorderPane();
 		VBox layout1 = new VBox(10);
-		rootLayout1.setId("menuPane");
+		rootLayout1.setId("menuPane"); //CSS stylesheet
 		layout1.setPadding(new Insets(20, 50, 50, 50));
 		rootLayout1.setCenter(layout1);
 
 		// add buttons into VBox for layout1
 		layout1.getChildren().addAll(labelMenu, twoPlayers, threePlayers, fourPlayers, startGame);
+		layout1.prefWidthProperty().bind(rootLayout1.widthProperty());
+		layout1.prefHeightProperty().bind(rootLayout1.heightProperty());
 
 		// create scene1 with layout1
 		scene1 = new Scene(rootLayout1, 550, 350);
