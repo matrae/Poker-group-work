@@ -11,13 +11,19 @@
     -fx-padding: 5.0px;
     -fx-border-color: black;
     -fx-border-width: 2.0px;
+    -fx-background-color: green;
+}
+
+#menuPane {
+	-fx-background-image: url("/images/menu_background.png");
+    -fx-background-position: center center;
 }
 
 .player {
 	-fx-padding: 5.0px;
     -fx-border-color: black;
     -fx-border-width: 2.0px;
-    -fx-background-color: green;
+    -fx-background-image: url("/images/green_background.png");
     -fx-color: white;
 }
 
