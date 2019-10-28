@@ -73,9 +73,9 @@
 
 .button{
 	-fx-background-color: 
-        #3c7fb1,
-        linear-gradient(#fafdfe, #e8f5fc),
-        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 30 3 30;
@@ -85,7 +85,7 @@
    }
 	
 .button:pressed{
-	-fx-background-color: #bae4f1;
+	-fx-background-color: rgb(211,211,211);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 30 3 30;
@@ -95,10 +95,16 @@
    }
 
 .PokerGameView-button{
-	-fx-background-color: green;
-	-fx-border-color: black;
-    -fx-border-width: 1.0px;
-	-fx-background-color: white;
+	-fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
 }
 
 
