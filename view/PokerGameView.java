@@ -45,6 +45,7 @@ public class PokerGameView {
 
 		// add buttons into VBox for layout1
 		layout1.getChildren().addAll(labelMenu, twoPlayers, threePlayers, fourPlayers, startGame);
+		labelMenu.getStyleClass().add("labelMenu"); //CSS
 		startGame.getStyleClass().add("startGame-button"); //CSS
 		twoPlayers.getStyleClass().add("twoPlayers-button"); //CSS
 		threePlayers.getStyleClass().add("threePlayers-button"); //CSS

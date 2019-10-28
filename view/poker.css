@@ -14,12 +14,24 @@
     -fx-background-color: #faf0e6;
 }
 
+.deckLabel {
+	
+
+}
+
 #menuPane {
 	-fx-background-image: url("/images/menu_background.png");
     -fx-background-position: center center;
     -fx-font-size: 18px;
     -fx-font-weight: bold;
 }
+
+
+.labelMenu {
+	-fx-text-fill: #f0f8ff;
+	-fx-font-size: 20px;
+}
+
 
 .player {
 	-fx-padding: 5.0px;
@@ -112,8 +124,10 @@
     
    }
    
+
+   
 .startGame-button {
-	   	-fx-width: 50px;
+	-fx-width: 50px;
    	-fx-pref-width: 150px;
     -fx-background-color: 
         #ecebe9,
@@ -129,12 +143,63 @@
     -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
 }
 
+.twoPlayers-button {
+	
+}
+
+.threePlayers-button {
+	
+}
+
+.fourPlayers-button {
+	
+}
+
+
 .PokerGameView-button{
 	-fx-background-color: green;
 	-fx-border-color: black;
     -fx-border-width: 1.0px;
 	-fx-background-color: white;
 }
+
+.goBack-button {
+	-fx-width: 50px;
+   	-fx-pref-width: 150px;
+    -fx-background-color: #808080;	
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+    -fx-padding: 3 30 3 30;
+    -fx-width: 100px;
+}
+	
+
+.shuffle-button {
+	-fx-background-color: #808080;	
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+    -fx-padding: 3 30 3 30;
+    -fx-width: 100px;
+	
+}
+
+.deal-button {
+	-fx-background-color: #808080;	
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+    -fx-padding: 3 30 3 30;
+    -fx-width: 100px;
+	
+	
+}
+
+
 
 
 
