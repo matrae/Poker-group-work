@@ -5,6 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 import java.awt.event.ActionListener;
+import java.io.Console;
 
 import game.PokerGame;
 import model.Card;
@@ -24,21 +25,20 @@ public class PokerGameController{
 		
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
-		view.startGame.setOnAction(e -> view.stage.setScene(view.scene2));
+		view.threePlayers.setOnAction(e -> setPlayers(3));
+		view.startGame.setOnAction(e ->	view.stage.setScene(view.scene2));
+		System.out.println(PokerGame.NUM_PLAYERS);
 		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
-		//view.threePlayers.setOnAction(e -> setThreePlayers());
 		
 		
-		//view.twoPlayers().addActionListener(e -> addPlayer() );
 		
 	}
 	
-	//private void addPLayer () {
-	//	PokerGame.NUM_PLAYERS++;
-//	public void setThreePlayers() {
-	//	PokerGame.NUM_PLAYERS = 3;
-	//	PokerGame.updatePlayer();
-//	}
+		
+	public void setPlayers(int i) {
+		PokerGame.NUM_PLAYERS = i;
+		model.updatePlayers();
+	}
 	
     /**
      * Remove all cards from players hands, and shuffle the deck

@@ -7,7 +7,8 @@ import model.PokerGameModel;
 import view.PokerGameView;
 
 public class PokerGame extends Application {
-	public static int NUM_PLAYERS = 2;
+	public static int NUM_PLAYERS =2;
+	
 	
 	PokerGameModel model;
 	PokerGameView view;

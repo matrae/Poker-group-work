@@ -16,6 +16,13 @@ public class PokerGameModel {
 		deck = new DeckOfCards();
 	}
 	
+	public void updatePlayers() {
+		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+			players.add(new Player("Player " + i));
+		}
+	}
+	
+	
 	public Player getPlayer(int i) {
 		return players.get(i);
 	}

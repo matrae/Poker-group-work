@@ -43,6 +43,7 @@ public class PokerGameView {
 		rootLayout1.setCenter(layout1);
 		layout1.setAlignment(Pos.CENTER);
 
+		
 		// add buttons into VBox for layout1
 		layout1.getChildren().addAll(labelMenu, twoPlayers, threePlayers, fourPlayers, startGame);
 		labelMenu.getStyleClass().add("labelMenu"); //CSS
