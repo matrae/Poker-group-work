@@ -15,6 +15,7 @@ import game.PokerGame;
 import model.PokerGameModel;
 
 public class PokerGameView {
+	private VBox playerHolder;
 	private HBox players;
 	private ControlArea controls;
 	private PokerGameModel model;
@@ -56,14 +57,18 @@ public class PokerGameView {
 		// create scene1 with layout1
 		scene1 = new Scene(rootLayout1, 550, 350);
 		players = new HBox();
+		playerHolder = new VBox();
 	
 
 		// Create the control area
 		controls = new ControlArea();
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
 
-		// Put players, controls & goBack Button into a BorderPane
-		layout2.setCenter(players);
+		// Put player into the VBox playerHolder
+		playerHolder.getChildren().add(players);
+		
+		// Put player holder, controls & goBack Button into a BorderPane 
+		layout2.setCenter(playerHolder);
 		layout2.setBottom(controls);
 
 		// Disallow resizing - which is difficult to get right with images
@@ -102,9 +107,17 @@ public class PokerGameView {
 		model.getDeck().shuffle();
 		
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-			PlayerPane pp = new PlayerPane();
-			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-			players.getChildren().add(pp);
+			if (i < 2) {
+				// Add players in first VBOX
+				PlayerPane pp = new PlayerPane();
+				pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
+				players.getChildren().add(pp);
+			} else {
+				// Add players in VBOX underneath
+				// PlayerPane pp = new PlayerPane();
+				// pp.setPlayer(model.getPlayer(i)); 
+				// players.getChildren().add(pp);
+			}
 		}
 		
 	}
