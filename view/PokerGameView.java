@@ -58,8 +58,8 @@ public class PokerGameView {
 
 		// Create layout 2
 		// Create all of the player panes we need, and put them into an HBox
-		players = new HBox();
-		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+			players = new HBox();
+			for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
 			players.getChildren().add(pp);
@@ -102,5 +102,13 @@ public class PokerGameView {
 	public Button getGoBackButton() {
 		return controls.goBack;
 	}
-
+	
+	public void displayPlayer() {
+		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+			PlayerPane pp = new PlayerPane();
+			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
+			players.getChildren().add(pp);
+		}
+		
+	}
 }

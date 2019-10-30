@@ -25,19 +25,32 @@ public class PokerGameController{
 		
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
-		view.threePlayers.setOnAction(e -> setPlayers(3));
-		view.startGame.setOnAction(e ->	view.stage.setScene(view.scene2));
-		System.out.println(PokerGame.NUM_PLAYERS);
-		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
 		
+		//set Buttons to playerNumbers
+		view.twoPlayers.setOnAction(e -> setPlayers(2));
+		view.threePlayers.setOnAction(e -> setPlayers(3));
+		view.fourPlayers.setOnAction(e -> setPlayers(4));
+		
+		//start game and go back buttons
+		view.startGame.setOnAction(e ->	view.stage.setScene(view.scene2));		
+		view.getGoBackButton().setOnAction(e -> view.stage.setScene(view.scene1));
 		
 		
 	}
 	
+//	public void clearGame(int i) {
+	//	model.clearPlayer();
+	//	PokerGame.NUM_PLAYERS = i;
+	//	model.getDeck();
+	//	view.stage.setScene(view.scene1);
+		
+	//}
+	
 		
 	public void setPlayers(int i) {
 		PokerGame.NUM_PLAYERS = i;
-		model.updatePlayers();
+		model.createPLayer();
+		view.displayPlayer();
 	}
 	
     /**
