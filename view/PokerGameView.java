@@ -55,15 +55,8 @@ public class PokerGameView {
 
 		// create scene1 with layout1
 		scene1 = new Scene(rootLayout1, 550, 350);
-
-		// Create layout 2
-		// Create all of the player panes we need, and put them into an HBox
-			players = new HBox();
-			for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-			PlayerPane pp = new PlayerPane();
-			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-			players.getChildren().add(pp);
-		}
+		players = new HBox();
+	
 
 		// Create the control area
 		controls = new ControlArea();
@@ -103,7 +96,11 @@ public class PokerGameView {
 		return controls.goBack;
 	}
 	
+	// Create all of the player panes we need, and put them into an HBox
 	public void displayPlayer() {
+		players.getChildren().clear();
+		model.getDeck().shuffle();
+		
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic

@@ -38,15 +38,7 @@ public class PokerGameController{
 		
 	}
 	
-//	public void clearGame(int i) {
-	//	model.clearPlayer();
-	//	PokerGame.NUM_PLAYERS = i;
-	//	model.getDeck();
-	//	view.stage.setScene(view.scene1);
-		
-	//}
 	
-		
 	public void setPlayers(int i) {
 		PokerGame.NUM_PLAYERS = i;
 		model.createPLayer();

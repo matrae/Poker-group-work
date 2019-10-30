@@ -106,7 +106,6 @@
     -fx-font-size: 14px;
    	-fx-width: 50px;
    	-fx-pref-width: 120px;
-    
    }
 	
 .button:pressed{
@@ -118,8 +117,6 @@
     -fx-padding: 10 20 10 20;
     
    }
-   
-
    
 .startGame-button {
     -fx-background-color: 
