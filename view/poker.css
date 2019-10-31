@@ -127,10 +127,10 @@
 
 .button:pressed {
     -fx-background-color: 
-        linear-gradient(#ff8c00, #ffd65b),
-        linear-gradient(#ff8c00, #ffe657),
-        linear-gradient(#ff8c00, #ffe657),
-        linear-gradient(#ff8c00 0%, #ffa500 50%, #ffe657 100%),
+        linear-gradient(rgb(236,118,0), #ffd65b),
+        linear-gradient(rgb(236,118,0), #ffe657),
+        linear-gradient(rgb(236,118,0), #ffe657),
+        linear-gradient(rgb(236,118,0) 0%, #ffa500 50%, #ffe657 100%),
         linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
     -fx-background-radius: 30;
     -fx-background-insets: 0,1,2,3,0;
