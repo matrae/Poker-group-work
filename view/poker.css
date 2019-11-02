@@ -94,7 +94,7 @@
 }
 
 
-.button{
+.button {
 	-fx-background-color: 
         #707070,
         linear-gradient(#fcfcfc, #f3f3f3),
@@ -108,11 +108,34 @@
    	-fx-pref-width: 120px;
    }
 	
-.button:pressed{
-	-fx-background-color: green;
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
-    -fx-text-fill: black;
+   
+.button:hover {
+	 -fx-background-color: 
+        linear-gradient(#e68400, #ffd65b),
+        linear-gradient(#f2ba44, #ffef84),
+        linear-gradient(#efaa22, #ffea6a),
+        linear-gradient(#eea10b 0%, #f8c202 50%, #ffe657 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+	
+}
+
+.button:pressed {
+    -fx-background-color: 
+        linear-gradient(rgb(236,118,0), #ffd65b),
+        linear-gradient(rgb(236,118,0), #ffe657),
+        linear-gradient(rgb(236,118,0), #ffe657),
+        linear-gradient(rgb(236,118,0) 0%, #ffa500 50%, #ffe657 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
     -fx-font-size: 14px;
     -fx-padding: 10 20 10 20;
     
@@ -149,6 +172,22 @@
 	
 }
 
+.twoPlayers-button:focused {
+    -fx-background-color: 
+	    linear-gradient(#ffd65b, rgb(236,118,0)),
+        linear-gradient(#ffe657, rgb(236,118,0)),
+        linear-gradient(#ffe657, rgb(236,118,0)),
+        linear-gradient(#ffe657 0%, #ffa500 50%, rgb(236,118,0) 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+}
+
+
 .threePlayers-button {
     -fx-background-color: 
         linear-gradient(#ffd65b, #e68400),
@@ -165,6 +204,21 @@
 	
 }
 
+.threePlayers-button:focused {
+	    -fx-background-color: 
+	    linear-gradient(#ffd65b, rgb(236,118,0)),
+        linear-gradient(#ffe657, rgb(236,118,0)),
+        linear-gradient(#ffe657, rgb(236,118,0)),
+        linear-gradient(#ffe657 0%, #ffa500 50%, rgb(236,118,0) 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+}
+
 .fourPlayers-button {
     -fx-background-color: 
         linear-gradient(#ffd65b, #e68400),
@@ -179,6 +233,21 @@
     -fx-font-size: 14px;
     -fx-padding: 10 20 10 20;
 	
+}
+
+.fourPlayers-button:focused {
+	 -fx-background-color: 
+	    linear-gradient(#ffd65b, rgb(236,118,0)),
+        linear-gradient(#ffe657, rgb(236,118,0)),
+        linear-gradient(#ffe657, rgb(236,118,0)),
+        linear-gradient(#ffe657 0%, #ffa500 50%, rgb(236,118,0) 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
 }
 
 
