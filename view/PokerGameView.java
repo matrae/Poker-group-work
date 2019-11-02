@@ -101,6 +101,7 @@ public class PokerGameView {
 		return controls.goBack;
 	}
 	
+	
 	// Create all of the player panes we need, and put them into an HBox
 	public void displayPlayer() {
 		players.getChildren().clear();

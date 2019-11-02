@@ -30,7 +30,6 @@ public class PokerGameController{
 		view.twoPlayers.setOnAction(e -> setPlayers(2));
 		view.threePlayers.setOnAction(e -> setPlayers(3));
 		view.fourPlayers.setOnAction(e -> setPlayers(4));
-		//view.fourPlayers.setOnAction(e -> {setPlayers(4)); button.setDisable(true)};
 		
 		//start game and go back buttons
 		view.startGame.setOnAction(e ->	view.stage.setScene(view.scene2));		
