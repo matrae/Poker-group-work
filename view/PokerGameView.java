@@ -106,18 +106,24 @@ public class PokerGameView {
 		players.getChildren().clear();
 		model.getDeck().shuffle();
 		
+	
+		
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-			if (i < 2) {
+			PlayerPane pp = new PlayerPane();
+			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
+			players.getChildren().add(pp);
+			
+			//if (i < 2) {
 				// Add players in first VBOX
-				PlayerPane pp = new PlayerPane();
-				pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-				players.getChildren().add(pp);
-			} else {
+				//PlayerPane pp = new PlayerPane();
+				//pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
+				//players.getChildren().add(pp);
+			//} else {
 				// Add players in VBOX underneath
 				// PlayerPane pp = new PlayerPane();
 				// pp.setPlayer(model.getPlayer(i)); 
 				// players.getChildren().add(pp);
-			}
+			//}
 		}
 		
 	}
