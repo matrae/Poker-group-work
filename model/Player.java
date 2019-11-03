@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import game.PokerGame;
+
 public class Player implements Comparable<Player> {
     public static final int HAND_SIZE = 5;
     
@@ -34,6 +36,10 @@ public class Player implements Comparable<Player> {
     public int getNumCards() {
         return cards.size();
     }
+    
+    public HandType getHandtype() {
+    	return handType;
+    }
 
     /**
      * If the hand has not been evaluated, but does have all cards, 
@@ -54,7 +60,7 @@ public class Player implements Comparable<Player> {
     	String scoreString = Integer.toString(score);
     	return scoreString;
     }
-
+    
     /**
      * Hands are compared, based on the evaluation they have.
      */
@@ -62,4 +68,6 @@ public class Player implements Comparable<Player> {
     public int compareTo(Player o) {
         return handType.compareTo(o.handType);
     }
+
+
 }
