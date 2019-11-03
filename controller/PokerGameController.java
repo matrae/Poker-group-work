@@ -85,7 +85,6 @@ public class PokerGameController{
     		for(int i = 0; i < PokerGame.NUM_PLAYERS-1; i++) {
      			Player o = model.getPlayer(i);
     			Player p = model.getPlayer(i+1);
-    			System.out.println(p.compareTo(o));
     			if (p.compareTo(o) < 0) {
     				winner = i;
     			} else if (p.compareTo(o) > 0) {
