@@ -25,11 +25,12 @@ Our aim was to implement a menu in which you first choose the number of players 
 We implemented the logic for the different hand types (e.g. straight, full house) in the class handType. For the method isStraight we made use of a lambda expression to sort the cards before checking if it’s a straight or not.
 - JUnit tests
 To test whether or not the handType class works correctly we implemented some more tests. We did not do this for all hand types (to save some time) but as the most complex method isStraightFlush works correctly we assume that the rest works also correctly.
-
+- Added a score updater and score getter
 
 
 # Controller Adjustments
 - Added action events so you are able to go to the second scene with startGame button and switch back from scene2 to scene1 with the goBack button
 - Added action events for the selection of the number of players, defined for each button; twoPlayers, threePlayers and fourPlayers → when you select twoPlayers the game sets the Players equal to 2 using the method setPlayers
+- Added a card compariosn. The deal method in PokerGameController also includes a simplified card comparison. It does not work a 100% reliable but our aim was to show that the score label in fact updates. 
 
  
