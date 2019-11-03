@@ -81,7 +81,7 @@ public class PokerGameController{
     		
         	}
     		//Set winner to zero 
-			int winner = 0;
+			int winner = 5;
     		for(int i = 0; i < PokerGame.NUM_PLAYERS-1; i++) {
      			Player o = model.getPlayer(i);
     			Player p = model.getPlayer(i+1);
@@ -89,14 +89,17 @@ public class PokerGameController{
     				winner = i;
     			} else if (p.compareTo(o) > 0) {
     				winner = i+1;
+    			} else {
+    				winner = 5;
     			}
-    		} 
-			if (winner != 0) {
+    		}
+    		if (winner != 5) {
 				Player p = model.getPlayer(winner);
 				p.updateScore();
 				PlayerPane pp = view.getPlayerPane(winner);
         		pp.updatePlayerDisplay();
-			}
+    		}
+			
 
     	} else {
             Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
