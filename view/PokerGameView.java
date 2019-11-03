@@ -17,6 +17,7 @@ import model.PokerGameModel;
 public class PokerGameView {
 	private VBox playerHolder;
 	private HBox players;
+	private HBox[] playerHBoxes = new HBox[4];
 	private ControlArea controls;
 	private PokerGameModel model;
 	
@@ -108,23 +109,22 @@ public class PokerGameView {
 		model.getDeck().shuffle();
 		
 	
-		
+		int BoxPosition = -1;
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-			PlayerPane pp = new PlayerPane();
-			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-			players.getChildren().add(pp);
 			
-			//if (i < 2) {
-				// Add players in first VBOX
-				//PlayerPane pp = new PlayerPane();
-				//pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-				//players.getChildren().add(pp);
-			//} else {
-				// Add players in VBOX underneath
-				// PlayerPane pp = new PlayerPane();
-				// pp.setPlayer(model.getPlayer(i)); 
-				// players.getChildren().add(pp);
-			//}
+				if(i == 0 || i == 2) {
+					BoxPosition++;
+					playerHBoxes[BoxPosition] = new HBox();
+				}
+
+				PlayerPane pp = new PlayerPane();
+				pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
+				playerHBoxes[BoxPosition].getChildren().add(pp);
+				
+				if(i == 0 || i == 2) {
+					playerHolder.getChildren().add(playerHBoxes[BoxPosition]);
+				}
+
 		}
 		
 	}
