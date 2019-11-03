@@ -4,7 +4,9 @@ Group members: Andrea Rippstein, Celine Mathis, Mattia Raemy
 
 # Introduction
 
-Our aim was to implement a menu in which you first choose the number of players and then start the game by pressing a button. Then you go on to the actual game in the second window and play poker in a modern-looking GUI. The idea was that you could end a game at any point with the goBack/back to menu button and choose a new number of players and start the game again (a new game). We wanted to improve the GUI to make it look like the cards had a felt background and a nice back-side. Whenever you hover over a button you can see  the hover effect and when you press the button it looks clicked for that time that you clicked it. We implemented a coin that would display the score to give it a bit of a game vibe.
+Our aim was to implement a menu in which you first choose the number of players and then start the game by pressing a button. Then you go on to the actual game in the second window and play poker in a modern-looking GUI. The idea was that you could end a game at any point with the goBack/back to menu button and choose a new number of players and start the game again (a new game). We wanted to improve the GUI to make it look like the cards had a felt background and a nice back-side. Whenever you hover over a button you can see  the hover effect and when you press the button it looks clicked for that time that you clicked it. We implemented a coin that would display the score to give it a bit of a gamer-vibe and show who the winner is. 
+
+Tried but failed: We tried to expand the view so it would adjust to the number of players (displaying the first 2 next to each other and then below), but we couldn't manage to do so after long hours of working on it. 
 
 # View adjustments
 - We added the scene1. The scene1 is the menu. The menu was created with the intent to select the number of players (button twoPlayers to fourPlayers) & then click on startGame
