@@ -1,10 +1,10 @@
 # Poker Mini-Project Documentation
  
-Group members: Andrea Rippstein, Céline Mathis, Mattia Raemy
+Group members: Andrea Rippstein, Celine Mathis, Mattia Raemy
 
 # Introduction
 
-Our aim was to implement a menu in which you first choose the number of players and then start the game by pressing a button. Then you go on to the actual game in the second window and play poker in a modern-looking GUI. The idea was that you could end a game at any point with the goBack/back to menu button and choose a new number of players and start the game again (a new game). We wanted to improve the GUI to make it look like the cards had a felt background and a nice back-side. Whenever you hover over a button you can see  the hover effect and when you press the button it looks “clicked” for that time that you clicked it. We implemented a coin that would display the score to give it a bit of a game vibe.
+Our aim was to implement a menu in which you first choose the number of players and then start the game by pressing a button. Then you go on to the actual game in the second window and play poker in a modern-looking GUI. The idea was that you could end a game at any point with the goBack/back to menu button and choose a new number of players and start the game again (a new game). We wanted to improve the GUI to make it look like the cards had a felt background and a nice back-side. Whenever you hover over a button you can see  the hover effect and when you press the button it looks clicked for that time that you clicked it. We implemented a coin that would display the score to give it a bit of a game vibe.
 
 # View adjustments
 - We added the scene1. The scene1 is the menu. The menu was created with the intent to select the number of players (button twoPlayers to fourPlayers) & then click on startGame
@@ -31,6 +31,6 @@ To test whether or not the handType class works correctly we implemented some mo
 # Controller Adjustments
 - Added action events so you are able to go to the second scene with startGame button and switch back from scene2 to scene1 with the goBack button
 - Added action events for the selection of the number of players, defined for each button; twoPlayers, threePlayers and fourPlayers → when you select twoPlayers the game sets the Players equal to 2 using the method setPlayers
-- Added a card compariosn. The deal method in PokerGameController also includes a simplified card comparison. It does not work a 100% reliable but our aim was to show that the score label in fact updates. 
+- Added a card comparison. The deal method in PokerGameController also includes a simplified card comparison. It does not work a 100% reliable but our aim was to show that the score label in fact updates. 
 
  
