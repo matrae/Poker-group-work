@@ -17,7 +17,7 @@ Tried but failed: We tried to expand the view so it would adjust to the number o
 - Added spaces between the cards, added rounded corners for the cards, added background image to the cards
 - Added a score label in the player view and added a coin image into the score label
 - Added all buttons to the CSS to have the opportunity to design them individually
-- Redesigned all buttons ( button: hover, button: pressed, button: focused)
+- Redesigned all buttons to get a better look and feel (button: hover, button: pressed, button: focused)
 
 
 # Model Adjustments
